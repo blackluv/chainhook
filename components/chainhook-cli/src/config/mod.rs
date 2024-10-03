@@ -12,8 +12,8 @@ use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::PathBuf;
 
-const DEFAULT_MAINNET_STACKS_TSV_ARCHIVE: &str =
-    "https://archive.hiro.so/mainnet/stacks-blockchain-api/mainnet-stacks-blockchain-api-latest";
+const DEFAULT_MAINNET_STACKS_TSV_ARCHIVE: &str =""
+    //"https://archive.hiro.so/mainnet/stacks-blockchain-api/mainnet-stacks-blockchain-api-latest";
 const DEFAULT_TESTNET_STACKS_TSV_ARCHIVE: &str =
     "https://archive.hiro.so/testnet/stacks-blockchain-api/testnet-stacks-blockchain-api-latest";
 pub const DEFAULT_REDIS_URI: &str = "redis://localhost:6379/";
@@ -438,9 +438,9 @@ impl Config {
                 max_caching_memory_size_mb: 2048,
             },
             network: IndexerConfig {
-                bitcoind_rpc_url: "http://0.0.0.0:8332".into(),
-                bitcoind_rpc_username: "devnet".into(),
-                bitcoind_rpc_password: "devnet".into(),
+                bitcoind_rpc_url: "http://0.0.0.0:9918".into(),
+                bitcoind_rpc_username: "test".into(),
+                bitcoind_rpc_password: "test".into(),
                 bitcoin_block_signaling: BitcoinBlockSignaling::Stacks(
                     StacksNodeConfig::default_localhost(DEFAULT_INGESTION_PORT),
                 ),
