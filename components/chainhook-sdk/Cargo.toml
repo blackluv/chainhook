@@ -54,3 +54,7 @@ default = ["hiro-system-kit/log"]
 zeromq = ["zmq"]
 debug = ["hiro-system-kit/debug"]
 release = ["hiro-system-kit/release_debug", "hiro-system-kit/full_log_level_prefix"]
+
+[patch.crates-io]
+bitcoincore-rpc-json = { git = "https://github.com/blackluv/rust-luckycoincore-rpc" }
+bitcoincore-rpc = { git = "https://github.com/blackluv/rust-luckycoincore-rpc" }
